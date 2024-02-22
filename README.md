@@ -1,2 +1,3 @@
 # leetcode-75
-take notes and review
+
+從2024/2/20開始寫leetcode 75  
