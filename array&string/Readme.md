@@ -8,10 +8,12 @@ Return the merged string.
 
 傳回合併後的字串 。
 
-想法
+#### 想法
 
 既然要輪流將數字排出，並且從第一個字串開始給，那就輪流將字串的數字導出來給一個新設置的string，直到某個字串沒東西傳了，另一個字串剩下的字元再全部加到string裡。
 
 因此需要這兩個字串最小的長度，這樣才能在for迴圈裡限制說要做幾次，再來給定一個新的string用來放最後的答案。
 
 最後還要使用到substr()，可以從某個位置到最後的字元都傳到string上。
+
+[1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75)
