@@ -22,4 +22,7 @@ Output: "AB"
 Input: str1 = "LEET", str2 = "CODE"
 Output: ""
 
+---
 ### 想法
+
+[1071. Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/description/?envType=study-plan-v2&envId=leetcode-75)
