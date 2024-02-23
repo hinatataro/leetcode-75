@@ -25,11 +25,12 @@ class Solution {
 public:
     int gcdOfSize(int a, int b)
         {
-            if(a<b)
-            {
-                return gcdOfSize(b, a);
-            }
-            else if(b == 0)
+            // 可以不用先交換，因為最後的return會幫我做到交換功能
+			// if(a<b)
+            // {
+            //     return gcdOfSize(b, a);
+            // }
+            if(b == 0)
             {
                 return a;
             }
