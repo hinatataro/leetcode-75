@@ -15,3 +15,36 @@ public:
         }    
     }
 };
+
+
+
+
+//補充一個自己寫的gcd方式
+
+class Solution {
+public:
+    int gcdOfSize(int a, int b)
+        {
+            if(a<b)
+            {
+                return gcdOfSize(b, a);
+            }
+            else if(b == 0)
+            {
+                return a;
+            }
+			//之前寫錯，不能整個裡面都if，會報錯
+			//error: non-void function does not return a value in all control paths [-Werror,-Wreturn-type]
+            return gcdOfSize(b, a%b);  //可以放在else，也可以直接寫在外面
+        }
+    string gcdOfStrings(string str1, string str2) {
+        if(str1 + str2 != str2 + str1)
+        {
+            return "";
+        }
+        else
+        {
+            return str1.substr(0, gcdOfSize(str1.size(), str2.size()));
+        }
+    }
+};
