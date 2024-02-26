@@ -42,4 +42,21 @@ public:
 };
 
 
+//優化以後
+class Solution {
+public:
+    bool canPlaceFlowers(vector<int>& flowerbed, int n) {
+        int len = flowerbed.size();
+        for(int i =0; i < len; i++)
+        {
+			//單純討論前面後面是不是0，確認現在位置可不可以種，並且裡面包含了如果這個位置是頭或尾的情況
+            if(flowerbed[i] == 0 && (i == 0 || flowerbed[i-1] == 0) && (i == len-1 || flowerbed[i+1] == 0))
+            {
+                n--;
+                i++; //因為這個點標記為種，那就很確定下一個不能種，可以跳過
+            }
+        }
+        return n<=0;
+    }
+};
 
